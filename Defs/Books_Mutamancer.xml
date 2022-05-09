@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+ 
+<Defs>
+
+	<!-- A trait and at least one book must be defined for each custom class.
+	Mage types should use the Arcane Tome example, and can define a torn script as a cheaper version that randomly assigns abilities
+	Fighter types should use Martial Tome example
+	Classes that support both types can use either Tome type. -->
+	
+   <ThingDef ParentName="Partial_ArcaneScriptBase">
+    <defName>Torn_BookOfMUTAMANCEER</defName>
+    <label>Torn Script: LABEL</label>
+    <thingClass>ThingWithComps</thingClass>
+    <description>Mutamancer torn script.</description>
+	<category>Item</category>
+	<selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+	<alwaysHaulable>true</alwaysHaulable>
+	
+	<resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <tradeNeverStack>true</tradeNeverStack>
+    <useHitPoints>true</useHitPoints>
+	<comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+	<rotatable>false</rotatable>
+    <graphicData>
+      <texPath>Books/torn_mutamancer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+  
+  <!-- Example of Arcane Tome book for MAGE types (hybrid classes can use either) -->
+  <ThingDef ParentName="ArcaneScriptBase">
+    <defName>BookOfMutamancer</defName>
+    <label>Arcane Tome: Mutamancer</label>
+    <thingClass>ThingWithComps</thingClass>
+    <description>A mage that manpulates nanomachines to warp the forms of allies and enemies alike.</description>
+	<category>Item</category>
+	<selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+	<alwaysHaulable>true</alwaysHaulable>	
+	<resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <tradeNeverStack>true</tradeNeverStack>
+    <useHitPoints>true</useHitPoints>
+	<comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+	<rotatable>false</rotatable>
+    <graphicData>
+      <texPath>Books/mutamancerbook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+  
+  <!-- Example of Martial Tome for FIGHTER types (hybrid classes can use either)
+  <ThingDef ParentName="CombatFormBase">
+    <defName>BookOfCommander</defName>
+    <label>Combat Style: Commander</label>
+    <thingClass>ThingWithComps</thingClass>
+    <description>Teaches a physically adept pawn how to become a charismatic leader.</description>
+	<category>Item</category>
+	<selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+	<alwaysHaulable>true</alwaysHaulable>	
+	<resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <tradeNeverStack>true</tradeNeverStack>
+    <useHitPoints>true</useHitPoints>
+	<comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+	<rotatable>false</rotatable>
+    <graphicData>
+      <texPath>Books/commander</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+  -->
+  
+</Defs>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+ 
+<Defs>
+
+	<!-- A trait and at least one book must be defined for each custom class.
+	Mage types should use the Arcane Tome example, and can define a torn script as a cheaper version that randomly assigns abilities
+	Fighter types should use Martial Tome example
+	Classes that support both types can use either Tome type. -->
+	
+	<!-- Custom Class Trait Example -->
+
+	<TraitDef>  
+		<defName>TM_TheMutamancer</defName>
+		<ignoreConfigErrors>true</ignoreConfigErrors>
+		<commonality>0</commonality>
+		<degreeDatas>	
+		  <li>
+			<label>Mutamancer</label>
+			<description>[PAWN_nameDef] is a mage that can control mutagenic nanomachines, son. [PAWN_pronoun] has developed a resistance to toxins and minor improvments around the board via manipulating nanomachines inside themself.</description>
+			<degree>4</degree>
+			<statOffsets>
+				<PsychicSensitivity>0.25</PsychicSensitivity>
+				<GlobalLearningFactor>0.1</GlobalLearningFactor>
+				<PainShockThreshold>.20</PainShockThreshold>
+				<MoveSpeed>.20</MoveSpeed>
+				<WorkSpeedGlobal>0.10</WorkSpeedGlobal>
+				<ToxicSensitivity>-.50</ToxicSensitivity>
+			</statOffsets>
+		  </li>
+		</degreeDatas>
+		<conflictingTraits>
+		</conflictingTraits>	
+	</TraitDef>
+	
+  
+</Defs>
