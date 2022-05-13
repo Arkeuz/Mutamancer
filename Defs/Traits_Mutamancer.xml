@@ -11,7 +11,7 @@
 	<!-- Custom Class Trait Example -->
 
 	<TraitDef>  
-		<defName>TM_TheMutamancer</defName>
+		<defName>A_TheMutamancer</defName>
 		<ignoreConfigErrors>true</ignoreConfigErrors>
 		<commonality>0</commonality>
 		<degreeDatas>	

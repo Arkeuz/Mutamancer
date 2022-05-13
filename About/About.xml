@@ -15,11 +15,13 @@
     <!-- used to pop up a warning and options if prerequisite mods aren't loaded -->
     <li>
       
+      
+      <displayName>A RimWorld of Magic</displayName>
       <packageId>Torann.ARimworldOfMagic</packageId>
       <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=244738546</steamWorkshopUrl>
     </li>
     <li>
-     
+      <displayName>Pawnmorpher</displayName>
       <packageId>tachyonite.pawnmorpherpublic</packageId>
       <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1786466855</steamWorkshopUrl>
     </li>
