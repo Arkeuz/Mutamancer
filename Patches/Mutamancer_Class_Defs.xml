@@ -15,11 +15,15 @@
 			<classIconColor>(.3,0,.6)</classIconColor>		 <!-- color of the class mark in(r,g,b) format -->
 			<tornScript>Torn_BookOfMUTAMANCEER</tornScript>						 <!-- only applies to mages, randomly assigns abilities based on skill learn chance, not required -->
 			<fullScript>BookOfMutamancer</fullScript>			 <!-- assigns all abilities when read -->
-			<!--
-			 <classMageAbilities>							 <!-* all mage abilities available to the class *->
-				<li>A_Hazmat</li>
-				<li>A_Hazmat_I</li>
 
+			 <classMageAbilities>							 <!-- all mage abilities available to the class -->
+				<li>A_Hazmat</li>
+
+
+			</classMageAbilities>
+			<learnableSpells>								 <!-- learnable magic related skills, allows access to class related cantrips eg briar patch, master spells, etc -->
+		   </learnableSpells>		
+<!--
 				<li>TM_Blink_I</li>
 				<li>TM_Blink_II</li>
 				<li>TM_Blink_III</li>
@@ -42,6 +46,7 @@
 			 <learnableSkills>								 <!-* learnable might related skills - currently all learnable might skills are open to every class *->
 			</learnableSkills>
 		-->
+			<canLearnKnacks>false</canLearnKnacks>
 			 <isMage>true</isMage>							 <!-- assigns mana need, validation to execute magic related tasks, and determines prerequisite trait to become this type of class -->
 			 <isFighter>false</isFighter>				     <!-- assigns stamina need, validation to execute might related tasks, and determines prerequisite trait to become this type of class -->
 															 <!-- if both mage and fighter are true, then either precursor is valid for promotion -->
