@@ -10,19 +10,14 @@
 				<li>A_Hazmat_I</li>
 			</abilityDefs>
 			<skills>
-				<li>
-					<label>A_Hazmat_eff</label>
-					<description>A_Hazmat_eff_desc</description>
-					<levelMax>3</levelMax>
-					<costToLevel>1</costToLevel>
-				</li>
+
 			</skills>
 			<costToLevel>1</costToLevel>		
 		</customPower>
 	</TorannMagic.TM_CustomPowerDef>
 	
   <TorannMagic.TMAbilityDef ParentName="CustomPower">
-    <defName>A_Hazmat</defName>
+    <defName>A_Hazmat_I</defName>
     <label>Hazmat</label>
     <uiIconPath>UI/Hazmat</uiIconPath>
     <description>This ability acts as a toggalble hazmat suit. It increases the pawn's toxic buildup resistance and mutagen resistance so that at max level, they are immune to both.This ability acts as a toggalble hazmat suit. It increases the pawn's toxic buildup resistance and mutagen resistance so that at max level, they are immune to both.</description>
@@ -70,8 +65,8 @@
     </MainVerb>
   </TorannMagic.TMAbilityDef>
 
-  <TorannMagic.TMAbilityDef ParentName="BaseMightAbility">
-    <defName>A_Hazmat_I</defName>
+  <TorannMagic.TMAbilityDef ParentName="CustomPower">
+    <defName>A_Hazmat_I_</defName>
     <label>Hazmat</label>
     <uiIconPath>UI/Hazmat</uiIconPath>
     <description>This ability acts as a toggalble hazmat suit. It increases the pawn's toxic buildup resistance and mutagen resistance so that at max level, they are immune to both.This ability acts as a toggalble hazmat suit. It increases the pawn's toxic buildup resistance and mutagen resistance so that at max level, they are immune to both.</description>
