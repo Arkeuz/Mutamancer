@@ -4,7 +4,8 @@
   <author>Arkeuz</author>
   <packageId>Arkeuz.Mutamancer</packageId> <!-- Common practice to use author name as a namespace to avoid name collision issues -->
 
-  <description>A Pawnmorpher / RW of magic patch that adds a new magic class!</description> <!-- appears in mod list -->
+  <description> It adds a new mage class that uses mutagens!
+  </description> <!-- appears in mod list -->
 
   <supportedVersions>
     <!-- used by version check warning -->
