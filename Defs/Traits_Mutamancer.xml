@@ -22,8 +22,8 @@
 			<statOffsets>
 				<PsychicSensitivity>0.25</PsychicSensitivity>
 				<GlobalLearningFactor>0.1</GlobalLearningFactor>
-				<PainShockThreshold>.20</PainShockThreshold>
-				<MoveSpeed>.20</MoveSpeed>
+				<PainShockThreshold>.10</PainShockThreshold>
+				<MoveSpeed>10</MoveSpeed>
 				<WorkSpeedGlobal>0.10</WorkSpeedGlobal>
 				<ToxicSensitivity>-.50</ToxicSensitivity>
 			</statOffsets>

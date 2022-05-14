@@ -6,7 +6,8 @@
 		<customPower>	
 			<forMage>true</forMage>
 			<abilityDefs>		
-				<li>Hazmat</li>
+				<li>A_Hazmat</li>
+				<li>A_Hazmat_I</li>
 			</abilityDefs>
 			<skills>
 				<li>
@@ -20,7 +21,7 @@
 		</customPower>
 	</TorannMagic.TM_CustomPowerDef>
 	
-  <TorannMagic.TMAbilityDef ParentName="BaseMightAbility">
+  <TorannMagic.TMAbilityDef ParentName="CustomPower">
     <defName>A_Hazmat</defName>
     <label>Hazmat</label>
     <uiIconPath>UI/Hazmat</uiIconPath>
@@ -69,45 +70,52 @@
     </MainVerb>
   </TorannMagic.TMAbilityDef>
 
-  <HediffDef >
-    <defName>A_Hazmat</defName>
-	<hediffClass>HediffWithComps</hediffClass>
-	<label>Hazmat</label>
-	<description>This ability acts as a toggalble hazmat suit. It increases the pawn's toxic buildup resistance and mutagen resistance so that at max level, they are immune to both.This ability acts as a toggalble hazmat suit. It increases the pawn's toxic buildup resistance and mutagen resistance so that at max level, they are immune to both.</description>
-    <defaultLabelColor>(0.6,0.8,1)</defaultLabelColor>
-    <scenarioCanAdd>false</scenarioCanAdd>
-	<makesSickThought>false</makesSickThought>
-	<tendable>false</tendable>
-    <makesAlert>false</makesAlert>
-	<minSeverity>0.001</minSeverity>
-	<maxSeverity>4.0</maxSeverity>
-	<isBad>false</isBad>
-	<initialSeverity>.5</initialSeverity>
-	<stages>
-      <li>
-        <label>I</label>
-        <minSeverity>0.001</minSeverity>
-		<becomeVisible>true</becomeVisible>
-		<statOffsets>
-            <MutagenSensitivity>-0.75</MutagenSensitivity>
-            <TransformationSensitivity>-0.75</TransformationSensitivity>
-            <MutationHaltChance>0.5</MutationHaltChance>
-            <ToxicSensitivity>-.25</ToxicSensitivity>
-		</statOffsets>
-      </li>
-	  <li>
-        <label>II</label>
-        <minSeverity>1</minSeverity>
-		<becomeVisible>true</becomeVisible>
-		<statOffsets>
-            <MutagenSensitivity>-1.5</MutagenSensitivity>
-            <TransformationSensitivity>-1.5</TransformationSensitivity>
-            <MutationHaltChance>1</MutationHaltChance>
-            <ToxicSensitivity>-.50</ToxicSensitivity>
-		</statOffsets>
-      </li>
-	</stages>
-  </HediffDef>
-
-
-</Defs>  
+  <TorannMagic.TMAbilityDef ParentName="BaseMightAbility">
+    <defName>A_Hazmat_I</defName>
+    <label>Hazmat</label>
+    <uiIconPath>UI/Hazmat</uiIconPath>
+    <description>This ability acts as a toggalble hazmat suit. It increases the pawn's toxic buildup resistance and mutagen resistance so that at max level, they are immune to both.This ability acts as a toggalble hazmat suit. It increases the pawn's toxic buildup resistance and mutagen resistance so that at max level, they are immune to both.</description>
+    <manaCost>0</manaCost>
+	<upkeepEnergyCost>.2</upkeepEnergyCost>
+	<upkeepRegenCost>.4</upkeepRegenCost>
+	<upkeepEfficiencyPercent>.2</upkeepEfficiencyPercent>
+    <shouldInitialize>true</shouldInitialize>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+        <hasStandardCommand>true</hasStandardCommand>
+		<abilityDef>A_Hazmat</abilityDef>
+		<isViolent>false</isViolent>
+        <defaultProjectile>Projectile_Default</defaultProjectile>
+            <warmupTime>0.5</warmupTime>
+        <SecondsToRecharge>60</SecondsToRecharge>
+        <range>0</range>
+        <soundCast>TM_VibrationLow</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+		<targetParams>
+			<canTargetItems>false</canTargetItems>
+			<canTargetPawns>false</canTargetPawns>
+			<canTargetBuildings>false</canTargetBuildings>
+			<canTargetSelf>true</canTargetSelf>
+			<canTargetLocations>false</canTargetLocations>
+		</targetParams>
+		<hediffsToApply>
+                <li>
+                    <hediffDef>A_Hazmat</hediffDef>
+                    <applyChance>1.0</applyChance>
+					<severity>-15</severity>
+                </li>
+				<li>
+                    <hediffDef>A_Hazmat</hediffDef>
+                    <applyChance>1.0</applyChance>
+					<severity>2</severity>
+                </li>
+            </hediffsToApply>
+    </MainVerb>
+  </TorannMagic.TMAbilityDef>
+</Defs>
